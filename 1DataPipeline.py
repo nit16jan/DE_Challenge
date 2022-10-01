@@ -5,7 +5,7 @@ import pandas as pd
 
 def data_processing():
     #Reading both files in single dataframe
-    df = pd.concat(map(pd.read_csv, [r'C:\Users\narora\Desktop\dataset1.csv',r'C:\Users\narora\Desktop\dataset2.csv']))
+    df = pd.concat(map(pd.read_csv, [r'C:\User\Desktop\dataset1.csv',r'C:\User\Desktop\dataset2.csv']))
 
     # To delete rows with null values. Doing this as first operation to clean/reduce the data
     notnull_names = pd.notnull(df.name)
@@ -24,7 +24,7 @@ def data_processing():
     df['above_100'] = df['price'] > 100
 
     # Export results to CSV
-    df.to_csv(r'C:\Users\narora\Desktop\processed.csv', index=False, columns=['name','first_name','last_name','price','above_100'])
+    df.to_csv(r'C:\User\Desktop\processed.csv', index=False, columns=['name','first_name','last_name','price','above_100'])
 
 default_args = {
     'owner':"NA",
