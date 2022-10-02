@@ -35,7 +35,7 @@ default_args = {
 }
 dag = DAG(
     dag_id='CSV Data Pipeline',
-    schedule_interval='0 1 * * *',
+    schedule_interval='0 1 * * *',  # to run at 1 am Daily once
     default_args=default_args,
     description='Section 1 Data Processing',
 )
