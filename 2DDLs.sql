@@ -2,11 +2,11 @@ CREATE TABLE customer
 (
 customer_id INT NOT NULL,
 customer_name VARCHAR(100),
-customer_ph_num INT,
+customer_ph_num VARCHAR(100),
 customer_address VARCHAR(500),
-target_create_dt date,
-target_update_dt date, 
-batch_id int, 
+target_create_dt date, --used to store Record Insert Date
+target_update_dt date, --used to store Record Update Date
+batch_id int,		       --to help track the batch when record got interted or updated
 CONSTRAINT customer_pk PRIMARY KEY (customer_id)
 );
 
@@ -14,14 +14,14 @@ CREATE TABLE salesperson
 (
 person_id INT NOT NULL,
 person_name VARCHAR(100),
-person_ph_num INT,
+person_ph_num VARCHAR(100),
 person_hire_dt date,
 person_termination_dt date,
 person_address VARCHAR(500),
 target_create_dt date,
 target_update_dt date, 
 batch_id int, 
-CONSTRAINT salesperson_pk PRIMARY KEY ([person_id)
+CONSTRAINT salesperson_pk PRIMARY KEY (person_id)
 );
 
 CREATE TABLE manufacturer
